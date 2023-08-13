@@ -4,6 +4,18 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Rising
+TARGET_BUILD_APERTURE_CAMERA := true
+TARGET_ENABLE_BLUR := true
+TARGET_HAS_UDFPS := true
+TARGET_USE_PIXEL_FINGERPRINT := true
+WITH_GMS := true
+TARGET_USE_GOOGLE_TELEPHONY := true
+TARGET_CORE_GMS := false
+TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
+
+
+
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
