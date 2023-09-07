@@ -4,17 +4,27 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Rising
+# AlphaDroid Xtras
 TARGET_BUILD_APERTURE_CAMERA := true
 TARGET_ENABLE_BLUR := true
 TARGET_HAS_UDFPS := true
 TARGET_USE_PIXEL_FINGERPRINT := true
-WITH_GMS := true
-TARGET_USE_GOOGLE_TELEPHONY := true
-TARGET_CORE_GMS := false
 TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
+WITH_GAPPS := true
+TARGET_SUPPORTS_QUICK_TAP := false
+TARGET_INCLUDE_PIXEL_CHARGER := true
+TARGET_INCLUDE_NGA := true
+TARGET_HAS_UDFPS := true
+TARGET_USE_GOOGLE_TELEPHONY := true
+TARGET_INCLUDE_PIXEL_FRAMEWORK := true
 
+# Debugging
+TARGET_INCLUDE_MATLOG := true
+TARGET_DEFAULT_ADB_ENABLED := true
 
+# Maintainer
+ALPHA_BUILD_TYPE := UnOfficial
+ALPHA_MAINTAINER := Omariscal1019
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
