@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_salami.mk
+    $(LOCAL_DIR)/derp_salami.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_salami-user \
-    lineage_salami-userdebug \
-    lineage_salami-eng
+    derp_salami-user \
+    derp_salami-userdebug \
+    derp_salami-eng
