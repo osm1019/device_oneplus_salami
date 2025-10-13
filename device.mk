@@ -28,8 +28,15 @@ $(call soong_config_set_bool,qtidisplay,pxlw_hw_iris7,true)
 $(call soong_config_set,surfaceflinger,udfps_lib,//hardware/oplus:libudfps_extension.oplus)
 $(call soong_config_set_bool,qtidisplay,oplus_udfps,true)
 
+
 # Fingerprint
 TARGET_HAS_UDFPS := true
+
+# LiveDisplay
+$(call soong_config_set,OPLUS_LINEAGE_LIVEDISPLAY_HAL,ENABLE_AF,false)
+$(call soong_config_set,OPLUS_LINEAGE_LIVEDISPLAY_HAL,ENABLE_SE,false)
+
+
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
