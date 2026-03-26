@@ -14,6 +14,42 @@ $(call inherit-product, device/oneplus/salami/device.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/alpha/config/common_full_phone.mk)
 
+# Device config
+TARGET_HAS_UDFPS := true
+TARGET_ENABLE_BLUR := true
+TARGET_EXCLUDES_AUDIOFX := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
+# Build config
+
+# TARGET_BUILD_PACKAGE options:
+# 1 - vanilla (default)
+# 2 - microg
+# 3 - gapps
+TARGET_BUILD_PACKAGE := 3
+
+ifeq ($(TARGET_BUILD_PACKAGE),3)
+  # (valid only for GAPPS builds)
+  TARGET_INCLUDE_GOOGLE_COMMS := true
+  TARGET_INCLUDE_PIXEL_LAUNCHER := true
+  TARGET_SUPPORTS_QUICK_TAP := true
+  TARGET_SUPPORTS_CALL_RECORDING := true
+  TARGET_INCLUDE_STOCK_ARCORE := true
+  TARGET_INCLUDE_LIVE_WALLPAPERS := true
+  TARGET_SUPPORTS_GOOGLE_RECORDER := false
+endif
+
+# Debugging
+TARGET_INCLUDE_MATLOG := false
+WITH_ADB_INSECURE := false
+
+# Extras
+TARGET_INCLUDE_SIMPLE_TUNE := true
+
+# Maintainer
+ALPHA_BUILD_TYPE := Official
+ALPHA_MAINTAINER := BrianOP13
+
 PRODUCT_NAME := alpha_salami
 PRODUCT_DEVICE := salami
 PRODUCT_MANUFACTURER := OnePlus

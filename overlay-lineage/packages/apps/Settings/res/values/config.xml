@@ -5,4 +5,8 @@
 -->
 <resources>
     <bool name="config_supportsTouchscreenGestures">true</bool>
+    
+        
+<!--Device overlay for OnePlus Settings-->
+    <bool name="config_show_device_settings_tile">true</bool>
 </resources>
